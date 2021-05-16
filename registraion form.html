@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang= "en">
+<head>
+     <nmeta charset ="UTF-8">
+     <meta http-equiv="X-UA-compaitable" content="IE=edge">
+     <meta name="veiwport" content="width=device-width, initial-scale=1.0">
+     <title>Form</title>
+     </head>
+     <style>
+         h3{
+             color:magenta
+       }
+     </style>
+     <body bgcolor="cyan">
+         <center>
+             <h3>SUMMER CAMP</h3>
+             <p id="Message" onclick="getForm()">REGISTRATION FORM</p>
+             <p id="reg_form"></p>
+         </center>
+     </body>
+     <script>
+         var setForm=document.getElementById("reg_form");
+         var br=document.createElement("br");
+         function getForm(){
+             var form=document.createElement("form");
+             form.setAttribute("id","form1");
+             //Create input for full name
+             var full_name=document.createElement("input");
+             full_name.setAttribute("id","full_name");
+             full_name.setAttribute("type","text");
+             full_name.setAttribute("placeholder","Full Name");
+
+             //create input for father's name
+             var fathers_name=document.createElement("input");
+             fathers_name.setAttribute("id","fathers_name");
+             fathers_name.setAttribute("type","text");
+             fathers_name.setAttribute("placeholder","Fathers Name");
+
+             //create input for mother's name
+             var mothers_name=document.createElement("input");
+             mothers_name.setAttribute("id","mothers_name");
+             mothers_name.setAttribute("type","text");
+             mothers_name.setAttribute("placeholder","Mothers Name");
+
+             //create input for age group
+
+             var ageGroup=document.createElement("input");
+             ageGroup.setAttribute("id","age");
+             ageGroup.setAttribute("name","Age Group");
+             var opt1=document.createElement("option");
+             opt1.setAttribute("value","5-8");
+             
+             var opt2=document.createElement("option");
+             opt2.setAttribute("value","8-12");
+
+             var opt3=document.createElement("option");
+             opt3.setAttribute("value","12-16");
+             
+             ageGroup.appendChild(opt1);
+             ageGroup.appendChild(opt2);
+             ageGroup.appendChild(opt3);
+
+             // create input for gender
+
+             var Gender=document.createElement("input");
+             Gender.setAttribute("id","Gender");
+             Gender.setAttribute("name","Gender");
+             var opt1=document.createElement("option");
+             opt1.setAttribute("value","Male");
+             
+             var opt2=document.createElement("option");
+             opt2.setAttribute("value","Female");
+
+             Gender.appendChild(opt1);
+             Gender.appendChild(opt2);
+             
+             //create input for skills
+
+             var skills=document.createElement("input");
+             skills.setAttribute("id","skills");
+             skills.setAttribute("type","text");
+             skills.setAttribute("placeholder","skills");
+
+             //create the submit button
+
+             var sub=document.createElement("input");
+             sub.setAttribute("id","submit");
+             sub.setAttribute("type","submit");
+             sub.setAttribute("name","submit");
+
+
+            form.appendChild(full_name);
+            form.appendChild(br.cloneNode());
+            form.appendChild(fathers_name);
+            form.appendChild(br.cloneNode());
+            form.appendChild(mothers_name);
+            form.appendChild(br.cloneNode());
+            form.appendChild(ageGroup);
+            form.appendChild(br.cloneNode());
+            form.appendChild(Gender);
+            form.appendChild(br.cloneNode());
+            form.appendChild(skills);
+            form.appendChild(br.cloneNode());
+            form.appendChild(sub);
+
+            setForm.append(form);
+
+           }
+
+     </script>
+    </html>
+     
