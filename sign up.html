@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang= "en">
+<head>
+     <nmeta charset ="UTF-8">
+     <meta http-equiv="X-UA-compaitable" content="IE=edge">
+     <meta name="veiwport" content="width=device-width, initial-scale=1.0">
+     </head>
+     <style>
+         h3{
+             color:rgb(255, 0, 170);
+         }
+         
+     </style>
+     <body bgcolor="indigo">
+         <center>
+         <h3> Sign Up</h3>
+         <p id="message" onclick="getForm()">REGISTRATION FORM</p>
+         <p id="reg_form"></p>
+         </center>
+     </body>
+     <script>
+         var setForm=document.getElementById("reg_form");
+         var br=document.createElement("br");
+         function getForm(){
+             var form=document.createElement("form");
+             form.setAttribute("id","form1");
+             //Create input for first name
+             var first_name=document.createElement("input");
+             first_name.setAttribute("id","first_name");
+             first_name.setAttribute("type","text");
+             first_name.setAttribute("placeholder","First Name");
+
+             //create input for last name
+             var last_name=document.createElement("input");
+             last_name.setAttribute("id","last_name");
+             last_name.setAttribute("type","text");
+             last_name.setAttribute("placeholder","Last Name");
+
+             //create input for email address
+             var email_address=document.createElement("input");
+             email_address.setAttribute("id","email_address");
+             email_address.setAttribute("type","text");
+             email_address.setAttribute("placeholder","Email address");
+
+             //DOB,Contact,EmailId,Password
+             var  password=document.createElement("input");
+             password.setAttribute("id","pass");
+             password.setAttribute("type","password");
+             password.setAttribute("placeholder","Password")
+
+             //create the sign up
+
+             var sign_up=document.createElement("input");
+             sign_up.setAttribute("id","sign_up");
+             sign_up.setAttribute("type","button");
+             sign_up.setAttribute("name","Sign Up");
+
+
+            form.appendChild(first_name);
+            form.appendChild(br.cloneNode());
+            form.appendChild(last_name);
+            form.appendChild(br.cloneNode());
+            form.appendChild(email_address);
+            form.appendChild(br.cloneNode());
+            form.appendChild(password);
+            form.appendChild(br.cloneNode());
+            form.appendChild(sign_up);
+
+            setForm.append(form);
+
+           }
+
+     </script>
+    </html>
