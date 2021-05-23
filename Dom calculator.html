@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang= "en">
+<head>
+     <nmeta charset ="UTF-8">
+     <meta http-equiv="X-UA-compaitable" content="IE=edge">
+     <meta name="veiwport" content="width=device-width, initial-scale=1.0">
+     <title>calculator</title>
+     </head>
+     <body bgcolor="aqua">
+         <script>
+             function calculate(){
+                 var num1=parseInt(prompt("Enter a number"))
+                 var num2=parseInt(prompt("Enter a number"))
+                 var op=prompt("Enter operator")
+                 if(op=='+'){
+                     document.write ("Sum:"+(num1+num2))
+                 }
+                 else if(op=='-'){
+                    document.write ("Diff:"+(num1-num2))
+                 }
+                 else if(op=='*'){
+                    document.write ("Product:"+(num1*num2))
+                 }
+                 else if(op=='/'){
+                    document.write ("Quotient:"+(num1/num2))
+                 }
+                 else{
+                     document.write("Invalid operator")
+                 }  
+             }
+             calculate()
+         </script>
+     </body>
+     </html>
