@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <nmeta charset ="UTF-8">
+        <meta http-equiv="X-UA-compaitable" content="IE=edge">
+        <meta name="veiwport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        </head>
+        <body bgcolor="lime">
+            
+        </body>
+        <script>
+            var searchElement=prompt("Enter the fruit or animal you want to search in the list");
+            let number=["mango","apple","orange","apricot","watermelon","pineapple","meskmelon","cat","dog","tiger","lion","cow","bull"];
+            for (i=0;i<number.length; i++){
+            if(number[i]==searchElement){
+            document.write(searchElement+" is present at the number: "+(i+1))
+            break;
+            }
+        }
+        </script>
+        </html>
