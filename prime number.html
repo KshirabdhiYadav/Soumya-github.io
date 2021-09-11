@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+    function checkPrime(){
+        var flag=true;
+        var number=parseInt(prompt("Enter a number to check whether it is a prime or not.."));
+        if(number==0 || number==1){
+            document.write("The number entered by you is neither prime nor composite.");
+        }
+        else if(number==2){
+            document.write("The number entered by you "+number+" is a prime number");
+        }
+        else{
+            // for(var j=2;j<number;j++){}
+            for(var i=2; i<number; i++){
+                // 5%2==0 -- false
+                // 5%3==0 -- false
+                // 5%4==0 -- false
+
+                // 6%2 == 0 - true - flag = false
+                // 6%3 == 0 - true - flag = false
+                // 6%4 == 0 - false,
+                // 6%5 == 0 - false,
+
+                //  WAP to print the list of all prime numbers upto a given value ( from user ).
+                //  input -- 20
+                // result / output -- 2,3,5,7,11,13,17,19
+                if(number%i==0){
+                  flag=false;
+                }
+            }
+            if(flag==true){
+                document.write("The number entered by you "+number+" is a prime number");
+            }
+            else{
+                document.write("The number entered by you "+number+" is not a prime number");
+            }            
+        }
+    }
+    checkPrime();
+</script>
+</html>
